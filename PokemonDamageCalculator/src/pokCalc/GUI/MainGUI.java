@@ -101,7 +101,7 @@ public class MainGUI {
 
 		txtPok1Level = new Text(cmpPokemon1, SWT.BORDER);
 		txtPok1Level.setText("100");
-		txtPok1Level.setBounds(255, 7, 38, 19);
+		txtPok1Level.setBounds(255, 7, 30, 19);
 
 		Label lblPok1Type = new Label(cmpPokemon1, SWT.NONE);
 		lblPok1Type.setBounds(10, 30, 60, 18);
@@ -126,12 +126,12 @@ public class MainGUI {
 		lblPok1CurrHPMax.setText("/000");
 
 		Label lblPok1PerBounds = new Label(cmpPokemon1, SWT.NONE);
-		lblPok1PerBounds.setBounds(345, 30, 60, 14);
-		lblPok1PerBounds.setText("(         %)");
+		lblPok1PerBounds.setBounds(354, 30, 60, 14);
+		lblPok1PerBounds.setText("(           %)");
 
 		txtPok1CurrHPPer = new Text(cmpPokemon1, SWT.BORDER);
 		txtPok1CurrHPPer.setText("100");
-		txtPok1CurrHPPer.setBounds(352, 27, 28, 19);
+		txtPok1CurrHPPer.setBounds(364, 27, 30, 19);
 
 		Label lblPok1Hp = new Label(cmpPokemon1, SWT.NONE);
 		lblPok1Hp.setBounds(10, 70, 60, 14);
@@ -190,22 +190,28 @@ public class MainGUI {
 		lblPok1Ivs.setText("IV's");
 
 		Combo cmbPok1IVHP = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterIVs(cmbPok1IVHP, 66);
+		enterIVs(cmbPok1IVHP);
+		cmbPok1IVHP.setBounds(117, 67, 48, 22);
 
 		Combo cmbPok1IVAtk = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterIVs(cmbPok1IVAtk, 94);
+		enterIVs(cmbPok1IVAtk);
+		cmbPok1IVAtk.setBounds(117, 94, 48, 22);
 
 		Combo cmbPok1IVDef = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterIVs(cmbPok1IVDef, 121);
+		enterIVs(cmbPok1IVDef);
+		cmbPok1IVDef.setBounds(117, 121, 48, 22);
 
 		Combo cmbPok1IVSpAtk = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterIVs(cmbPok1IVSpAtk, 149);
+		enterIVs(cmbPok1IVSpAtk);
+		cmbPok1IVSpAtk.setBounds(117, 149, 48, 22);
 
 		Combo cmbPok1IVSpDef = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterIVs(cmbPok1IVSpDef, 177);
+		enterIVs(cmbPok1IVSpDef);
+		cmbPok1IVSpDef.setBounds(117, 177, 48, 22);
 
 		Combo cmbPok1IVSpeed = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterIVs(cmbPok1IVSpeed, 205);
+		enterIVs(cmbPok1IVSpeed);
+		cmbPok1IVSpeed.setBounds(117, 205, 48, 22);
 
 		Label lblPok1Evs = new Label(cmpPokemon1, SWT.NONE);
 		lblPok1Evs.setBounds(167, 50, 60, 14);
@@ -243,45 +249,51 @@ public class MainGUI {
 
 		txtPok1HP = new Text(cmpPokemon1, SWT.BORDER);
 		txtPok1HP.setText("000");
-		txtPok1HP.setBounds(281, 67, 29, 19);
+		txtPok1HP.setBounds(281, 67, 30, 19);
 
 		txtPok1Atk = new Text(cmpPokemon1, SWT.BORDER);
 		txtPok1Atk.setText("000");
-		txtPok1Atk.setBounds(282, 95, 28, 19);
+		txtPok1Atk.setBounds(282, 95, 30, 19);
 
 		txtPok1Def = new Text(cmpPokemon1, SWT.BORDER);
 		txtPok1Def.setText("000");
-		txtPok1Def.setBounds(282, 122, 28, 19);
+		txtPok1Def.setBounds(282, 122, 30, 19);
 
 		txtPok1SpAtk = new Text(cmpPokemon1, SWT.BORDER);
 		txtPok1SpAtk.setText("000");
-		txtPok1SpAtk.setBounds(282, 150, 28, 19);
+		txtPok1SpAtk.setBounds(282, 150, 30, 19);
 
 		txtPok1SpDef = new Text(cmpPokemon1, SWT.BORDER);
 		txtPok1SpDef.setText("000");
-		txtPok1SpDef.setBounds(282, 178, 28, 19);
+		txtPok1SpDef.setBounds(282, 178, 30, 19);
 
 		txtPok1Speed = new Text(cmpPokemon1, SWT.BORDER);
 		txtPok1Speed.setText("000");
-		txtPok1Speed.setBounds(282, 206, 28, 19);
+		txtPok1Speed.setBounds(282, 206, 30, 19);
 
 		Combo cmbPok1ModHP = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterMods(cmbPok1ModHP, 66);
+		enterMods(cmbPok1ModHP);
+		cmbPok1ModHP.setBounds(366, 67, 48, 25);
 
 		Combo cmbPok1ModAtk = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterMods(cmbPok1ModAtk, 94);
+		enterMods(cmbPok1ModAtk);
+		cmbPok1ModAtk.setBounds(366, 94, 48, 25);
 
 		Combo cmbPok1ModDef = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterMods(cmbPok1ModDef, 121);
+		enterMods(cmbPok1ModDef);
+		cmbPok1ModDef.setBounds(366, 121, 48, 25);
 
 		Combo cmbPok1ModSpAtk = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterMods(cmbPok1ModSpAtk, 149);
+		enterMods(cmbPok1ModSpAtk);
+		cmbPok1ModSpAtk.setBounds(366, 149, 48, 25);
 
 		Combo cmbPok1ModSpDef = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterMods(cmbPok1ModSpDef, 177);
+		enterMods(cmbPok1ModSpDef);
+		cmbPok1ModSpDef.setBounds(366, 177, 48, 25);
 
 		Combo cmbPok1ModSpeed = new Combo(cmpPokemon1, SWT.READ_ONLY);
-		enterMods(cmbPok1ModSpeed, 205);
+		enterMods(cmbPok1ModSpeed);
+		cmbPok1ModSpeed.setBounds(366, 205, 48, 25);
 
 		Label lblPok1Mods = new Label(cmpPokemon1, SWT.NONE);
 		lblPok1Mods.setBounds(360, 50, 33, 14);
@@ -300,17 +312,17 @@ public class MainGUI {
 		lblPok1Item.setText("Item");
 
 		Combo cmbPok1Nature = new Combo(cmpPokemon1, SWT.NONE);
-		cmbPok1Nature.setBounds(76, 233, 89, 22);
+		cmbPok1Nature.setBounds(76, 233, 124, 25);
 
 		Combo cmbPok1Ability = new Combo(cmpPokemon1, SWT.NONE);
-		cmbPok1Ability.setBounds(76, 261, 89, 22);
+		cmbPok1Ability.setBounds(76, 261, 124, 22);
 
 		Combo cmbPok1Item = new Combo(cmpPokemon1, SWT.NONE);
-		cmbPok1Item.setBounds(76, 289, 89, 22);
+		cmbPok1Item.setBounds(76, 289, 124, 22);
 
 		Combo cmbPok1Status = new Combo(cmpPokemon1, SWT.READ_ONLY);
 		cmbPok1Status.setItems(new String[] {"Healthy", "Poisoned", "Badly Poisoned", "Burned", "Paralyzed", "Asleep", "Frozen"});
-		cmbPok1Status.setBounds(76, 317, 89, 22);
+		cmbPok1Status.setBounds(76, 317, 124, 25);
 		cmbPok1Status.select(0);
 
 		Label lblPok1Status = new Label(cmpPokemon1, SWT.NONE);
@@ -318,32 +330,32 @@ public class MainGUI {
 		lblPok1Status.setText("Status");
 
 		Combo cmbPok1Move1 = new Combo(cmpPokemon1, SWT.NONE);
-		cmbPok1Move1.setBounds(206, 233, 148, 22);
+		cmbPok1Move1.setBounds(206, 233, 160, 22);
 
 		Combo cmbPok1Move2 = new Combo(cmpPokemon1, SWT.NONE);
-		cmbPok1Move2.setBounds(206, 261, 148, 22);
+		cmbPok1Move2.setBounds(206, 261, 160, 22);
 
 		Combo cmbPok1Move3 = new Combo(cmpPokemon1, SWT.NONE);
-		cmbPok1Move3.setBounds(206, 289, 149, 22);
+		cmbPok1Move3.setBounds(206, 289, 160, 22);
 
 		Combo cmbPok1Move4 = new Combo(cmpPokemon1, SWT.NONE);
-		cmbPok1Move4.setBounds(206, 317, 149, 22);
+		cmbPok1Move4.setBounds(206, 317, 160, 22);
 
 		Button btnPok1Crit1 = new Button(cmpPokemon1, SWT.CHECK);
-		btnPok1Crit1.setBounds(352, 233, 53, 18);
+		btnPok1Crit1.setBounds(372, 234, 53, 18);
 		btnPok1Crit1.setText("Crit");
 
 		Button btnPok1Crit2 = new Button(cmpPokemon1, SWT.CHECK);
 		btnPok1Crit2.setText("Crit");
-		btnPok1Crit2.setBounds(352, 261, 53, 18);
+		btnPok1Crit2.setBounds(372, 262, 53, 18);
 
 		Button btnPok1Crit3 = new Button(cmpPokemon1, SWT.CHECK);
 		btnPok1Crit3.setText("Crit");
-		btnPok1Crit3.setBounds(352, 289, 53, 18);
+		btnPok1Crit3.setBounds(372, 290, 53, 18);
 
 		Button btnPok1Crit4 = new Button(cmpPokemon1, SWT.CHECK);
 		btnPok1Crit4.setText("Crit");
-		btnPok1Crit4.setBounds(352, 317, 53, 18);
+		btnPok1Crit4.setBounds(372, 317, 53, 18);
 
 		Label lblPok1Total = new Label(cmpPokemon1, SWT.NONE);
 		lblPok1Total.setBounds(320, 50, 60, 14);
@@ -386,7 +398,7 @@ public class MainGUI {
 		lblPok2Name.setBounds(10, 10, 60, 14);
 		
 		Combo cmbPok2Name = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Name.setBounds(76, 6, 139, 22);
+		cmbPok2Name.setBounds(76, 6, 139, 25);
 		
 		Label lblPok2Level = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2Level.setText("Level");
@@ -394,17 +406,17 @@ public class MainGUI {
 		
 		txtPok2Level = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2Level.setText("100");
-		txtPok2Level.setBounds(255, 7, 38, 19);
+		txtPok2Level.setBounds(255, 7, 30, 19);
 		
 		Label lblPok2Type = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2Type.setText("Type");
 		lblPok2Type.setBounds(10, 30, 60, 18);
 		
 		Combo cmbPok2Type1 = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Type1.setBounds(76, 26, 75, 22);
+		cmbPok2Type1.setBounds(76, 26, 75, 25);
 		
 		Combo cmbPok2Type2 = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Type2.setBounds(157, 26, 75, 22);
+		cmbPok2Type2.setBounds(157, 26, 75, 25);
 		
 		Label lblPok2CurrHP = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2CurrHP.setText("Curr HP");
@@ -419,12 +431,12 @@ public class MainGUI {
 		lblPok2CurrHPMax.setBounds(320, 30, 28, 14);
 		
 		Label lblPok2PerBounds = new Label(cmpPokemon2, SWT.NONE);
-		lblPok2PerBounds.setText("(         %)");
-		lblPok2PerBounds.setBounds(345, 30, 60, 14);
+		lblPok2PerBounds.setText("(           %)");
+		lblPok2PerBounds.setBounds(354, 30, 60, 14);
 		
 		txtPok2CurrHPPer = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2CurrHPPer.setText("100");
-		txtPok2CurrHPPer.setBounds(352, 27, 28, 19);
+		txtPok2CurrHPPer.setBounds(364, 27, 30, 19);
 		
 		Label lblPok2HP = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2HP.setText("HP");
@@ -463,22 +475,28 @@ public class MainGUI {
 		lblPok2IVs.setBounds(117, 50, 28, 14);
 
 		Combo cmbPok2IVHP = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterIVs(cmbPok2IVHP, 66);
+		enterIVs(cmbPok2IVHP);
+		cmbPok2IVHP.setBounds(117, 67, 48, 22);
 
 		Combo cmbPok2IVAtk = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterIVs(cmbPok2IVAtk, 94);
+		enterIVs(cmbPok2IVAtk);
+		cmbPok2IVAtk.setBounds(117, 94, 48, 22);
 
 		Combo cmbPok2IVDef = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterIVs(cmbPok2IVDef, 121);
+		enterIVs(cmbPok2IVDef);
+		cmbPok2IVDef.setBounds(117, 121, 48, 22);
 
 		Combo cmbPok2IVSpAtk = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterIVs(cmbPok2IVSpAtk, 149);
+		enterIVs(cmbPok2IVSpAtk);
+		cmbPok2IVSpAtk.setBounds(117, 149, 48, 22);
 
 		Combo cmbPok2IVSpDef = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterIVs(cmbPok2IVSpDef, 177);
+		enterIVs(cmbPok2IVSpDef);
+		cmbPok2IVSpDef.setBounds(117, 177, 48, 22);
 
 		Combo cmbPok2IVSpeed = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterIVs(cmbPok2IVSpeed, 205);
+		enterIVs(cmbPok2IVSpeed);
+		cmbPok2IVSpeed.setBounds(117, 205, 48, 22);
 
 
 		Label lblPok2BaseAtk = new Label(cmpPokemon2, SWT.NONE);
@@ -508,7 +526,7 @@ public class MainGUI {
 		Slider sldrPok2HP = new Slider(cmpPokemon2, SWT.NONE);
 		sldrPok2HP.setIncrement(4);
 		sldrPok2HP.setMaximum(252);
-		sldrPok2HP.setBounds(170, 69, 105, 15);
+		sldrPok2HP.setBounds(171, 69, 105, 15);
 
 		Slider sldrPok2Atk = new Slider(cmpPokemon2, SWT.NONE);
 		sldrPok2Atk.setIncrement(4);
@@ -537,11 +555,11 @@ public class MainGUI {
 
 		txtPok2HP = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2HP.setText("000");
-		txtPok2HP.setBounds(281, 67, 29, 19);
+		txtPok2HP.setBounds(281, 67, 30, 19);
 
 		txtPok2Atk = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2Atk.setText("000");
-		txtPok2Atk.setBounds(282, 95, 28, 19);
+		txtPok2Atk.setBounds(282, 95, 30, 19);
 
 		txtPok2Def = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2Def.setText("000");
@@ -549,39 +567,39 @@ public class MainGUI {
 
 		txtPok2SpAtk = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2SpAtk.setText("000");
-		txtPok2SpAtk.setBounds(282, 150, 28, 19);
+		txtPok2SpAtk.setBounds(282, 150, 30, 19);
 
 		txtPok2SpDef = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2SpDef.setText("000");
-		txtPok2SpDef.setBounds(282, 178, 28, 19);
+		txtPok2SpDef.setBounds(282, 178, 30, 19);
 
 		txtPok2Speed = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2Speed.setText("000");
-		txtPok2Speed.setBounds(282, 206, 28, 19);
+		txtPok2Speed.setBounds(282, 206, 30, 19);
 
 		Combo cmbPok2ModHP = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterMods(cmbPok2ModHP, 66);
-		cmbPok2ModHP.setBounds(358, 66, 48, 22);
+		enterMods(cmbPok2ModHP);
+		cmbPok2ModHP.setBounds(366, 67, 48, 25);
 
 		Combo cmbPok2ModAtk = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterMods(cmbPok2ModAtk, 94);
-		cmbPok2ModAtk.setBounds(358, 94, 48, 22);
+		enterMods(cmbPok2ModAtk);
+		cmbPok2ModAtk.setBounds(366, 94, 48, 25);
 
 		Combo cmbPok2ModDef = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterMods(cmbPok2ModDef, 121);
-		cmbPok2ModDef.setBounds(358, 121, 48, 22);
+		enterMods(cmbPok2ModDef);
+		cmbPok2ModDef.setBounds(366, 121, 48, 25);
 
 		Combo cmbPok2ModSpAtk = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterMods(cmbPok2ModSpAtk, 149);
-		cmbPok2ModSpAtk.setBounds(358, 149, 48, 22);
+		enterMods(cmbPok2ModSpAtk);
+		cmbPok2ModSpAtk.setBounds(366, 149, 48, 25);
 
 		Combo cmbPok2ModSpDef = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterMods(cmbPok2ModSpDef, 177);
-		cmbPok2ModSpDef.setBounds(358, 177, 48, 22);
+		enterMods(cmbPok2ModSpDef);
+		cmbPok2ModSpDef.setBounds(366, 177, 48, 25);
 
 		Combo cmbPok2ModSpeed = new Combo(cmpPokemon2, SWT.READ_ONLY);
-		enterMods(cmbPok2ModSpeed, 205);
-		cmbPok2ModSpeed.setBounds(358, 205, 48, 22);
+		enterMods(cmbPok2ModSpeed);
+		cmbPok2ModSpeed.setBounds(366, 205, 48, 25);
 
 		Label lblPok2Mods = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2Mods.setText("Mods");
@@ -600,17 +618,17 @@ public class MainGUI {
 		lblPok2Item.setBounds(10, 293, 60, 14);
 
 		Combo cmbPok2Nature = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Nature.setBounds(76, 233, 89, 22);
+		cmbPok2Nature.setBounds(76, 233, 124, 25);
 
 		Combo cmbPok2Ability = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Ability.setBounds(76, 261, 89, 22);
+		cmbPok2Ability.setBounds(76, 261, 124, 22);
 
 		Combo cmbPok2Item = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Item.setBounds(76, 289, 89, 22);
+		cmbPok2Item.setBounds(76, 289, 124, 25);
 
 		Combo cmbPok2Status = new Combo(cmpPokemon2, SWT.READ_ONLY);
 		cmbPok2Status.setItems(new String[] {"Healthy", "Poisoned", "Badly Poisoned", "Burned", "Paralyzed", "Asleep", "Frozen"});
-		cmbPok2Status.setBounds(76, 317, 89, 22);
+		cmbPok2Status.setBounds(76, 317, 124, 25);
 		cmbPok2Status.select(0);
 
 		Label lblPok2Status = new Label(cmpPokemon2, SWT.NONE);
@@ -618,32 +636,32 @@ public class MainGUI {
 		lblPok2Status.setBounds(10, 321, 60, 14);
 
 		Combo cmbPok2Move1 = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Move1.setBounds(206, 233, 148, 22);
+		cmbPok2Move1.setBounds(206, 233, 160, 22);
 
 		Combo cmbPok2Move2 = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Move2.setBounds(206, 261, 148, 22);
+		cmbPok2Move2.setBounds(206, 261, 160, 22);
 
 		Combo cmbPok2Move3 = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Move3.setBounds(206, 289, 149, 22);
+		cmbPok2Move3.setBounds(206, 289, 160, 22);
 
 		Combo cmbPok2Move4 = new Combo(cmpPokemon2, SWT.NONE);
-		cmbPok2Move4.setBounds(206, 317, 149, 22);
+		cmbPok2Move4.setBounds(206, 317, 160, 22);
 
 		Button btnPok2Crit1 = new Button(cmpPokemon2, SWT.CHECK);
 		btnPok2Crit1.setText("Crit");
-		btnPok2Crit1.setBounds(352, 233, 53, 18);
+		btnPok2Crit1.setBounds(372, 234, 53, 18);
 
 		Button btnPok2Crit2 = new Button(cmpPokemon2, SWT.CHECK);
 		btnPok2Crit2.setText("Crit");
-		btnPok2Crit2.setBounds(352, 261, 53, 18);
+		btnPok2Crit2.setBounds(372, 262, 53, 18);
 
 		Button btnPok2Crit3 = new Button(cmpPokemon2, SWT.CHECK);
 		btnPok2Crit3.setText("Crit");
-		btnPok2Crit3.setBounds(352, 289, 53, 18);
+		btnPok2Crit3.setBounds(372, 290, 53, 18);
 
 		Button btnPok2Crit4 = new Button(cmpPokemon2, SWT.CHECK);
 		btnPok2Crit4.setText("Crit");
-		btnPok2Crit4.setBounds(352, 317, 53, 18);
+		btnPok2Crit4.setBounds(372, 317, 53, 18);
 
 		Label lblPok2Total = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2Total.setText("Total");
@@ -651,27 +669,27 @@ public class MainGUI {
 
 		Label lblPok2TotHP = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotHP.setText("00");
-		lblPok2TotHP.setBounds(320, 70, 28, 14);
+		lblPok2TotHP.setBounds(332, 70, 28, 14);
 
 		Label lblPok2TotAtk = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotAtk.setText("00");
-		lblPok2TotAtk.setBounds(320, 98, 28, 14);
+		lblPok2TotAtk.setBounds(332, 98, 28, 14);
 
 		Label lblPok2TotDef = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotDef.setText("00");
-		lblPok2TotDef.setBounds(320, 125, 28, 14);
+		lblPok2TotDef.setBounds(332, 125, 28, 14);
 
 		Label lblPok2TotSpAtk = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotSpAtk.setText("00");
-		lblPok2TotSpAtk.setBounds(320, 153, 28, 14);
+		lblPok2TotSpAtk.setBounds(332, 153, 28, 14);
 
 		Label lblPok2TotSpDef = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotSpDef.setText("00");
-		lblPok2TotSpDef.setBounds(320, 181, 28, 14);
+		lblPok2TotSpDef.setBounds(332, 181, 28, 14);
 
 		Label lblPok2TotSpeed = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotSpeed.setText("00");
-		lblPok2TotSpeed.setBounds(320, 209, 28, 14);
+		lblPok2TotSpeed.setBounds(332, 209, 28, 14);
 	}
 	
 	public void createFieldGroup() {
@@ -893,17 +911,13 @@ public class MainGUI {
 		lblPok2MinMax4.setBounds(125, 329, 77, 14);
 	}
 	
-	public void enterMods(Combo fillCombo, int y) {
-		int x = 358;
+	public void enterMods(Combo fillCombo) {
 		fillCombo.setItems(new String[] {"+6", "+5", "+4", "+3", "+2", "+1", "0", "-1", "-2", "-3", "-4", "-5", "-6"});
-		fillCombo.setBounds(x, y, 48, 22);
 		fillCombo.select(6);
 	}
 	
-	public void enterIVs(Combo fillCombo, int y) {
-		int x = 117;
+	public void enterIVs(Combo fillCombo) {
 		fillCombo.setItems(new String[] {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"});
-		fillCombo.setBounds(x, y, 48, 22);
 		fillCombo.select(31);
 	}
 }
