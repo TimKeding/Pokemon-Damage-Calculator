@@ -12,6 +12,8 @@ import org.eclipse.swt.widgets.Slider;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 
 public class MainGUI {
 	private Text txtPok1Level;
@@ -122,7 +124,7 @@ public class MainGUI {
 		txtPok1CurrHPNum.setBounds(292, 27, 28, 19);
 
 		Label lblPok1CurrHPMax = new Label(cmpPokemon1, SWT.NONE);
-		lblPok1CurrHPMax.setBounds(320, 30, 28, 14);
+		lblPok1CurrHPMax.setBounds(320, 30, 38, 14);
 		lblPok1CurrHPMax.setText("/000");
 
 		Label lblPok1PerBounds = new Label(cmpPokemon1, SWT.NONE);
@@ -428,7 +430,7 @@ public class MainGUI {
 		
 		Label lblPok2CurrHPMax = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2CurrHPMax.setText("/000");
-		lblPok2CurrHPMax.setBounds(320, 30, 28, 14);
+		lblPok2CurrHPMax.setBounds(320, 30, 38, 14);
 		
 		Label lblPok2PerBounds = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2PerBounds.setText("(           %)");
@@ -563,7 +565,7 @@ public class MainGUI {
 
 		txtPok2Def = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2Def.setText("000");
-		txtPok2Def.setBounds(282, 122, 28, 19);
+		txtPok2Def.setBounds(282, 122, 30, 19);
 
 		txtPok2SpAtk = new Text(cmpPokemon2, SWT.BORDER);
 		txtPok2SpAtk.setText("000");
@@ -669,27 +671,27 @@ public class MainGUI {
 
 		Label lblPok2TotHP = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotHP.setText("00");
-		lblPok2TotHP.setBounds(332, 70, 28, 14);
+		lblPok2TotHP.setBounds(320, 70, 28, 14);
 
 		Label lblPok2TotAtk = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotAtk.setText("00");
-		lblPok2TotAtk.setBounds(332, 98, 28, 14);
+		lblPok2TotAtk.setBounds(320, 98, 28, 14);
 
 		Label lblPok2TotDef = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotDef.setText("00");
-		lblPok2TotDef.setBounds(332, 125, 28, 14);
+		lblPok2TotDef.setBounds(320, 125, 28, 14);
 
 		Label lblPok2TotSpAtk = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotSpAtk.setText("00");
-		lblPok2TotSpAtk.setBounds(332, 153, 28, 14);
+		lblPok2TotSpAtk.setBounds(320, 153, 28, 14);
 
 		Label lblPok2TotSpDef = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotSpDef.setText("00");
-		lblPok2TotSpDef.setBounds(332, 181, 28, 14);
+		lblPok2TotSpDef.setBounds(320, 181, 28, 14);
 
 		Label lblPok2TotSpeed = new Label(cmpPokemon2, SWT.NONE);
 		lblPok2TotSpeed.setText("00");
-		lblPok2TotSpeed.setBounds(332, 209, 28, 14);
+		lblPok2TotSpeed.setBounds(320, 209, 28, 14);
 	}
 	
 	public void createFieldGroup() {
@@ -714,7 +716,7 @@ public class MainGUI {
 		
 		Group grpTerrain = new Group(cmpField, SWT.NONE);
 		grpTerrain.setText("Terrain");
-		grpTerrain.setBounds(105, 10, 290, 36);
+		grpTerrain.setBounds(105, 10, 320, 36);
 		
 		Button btnNoTerrain = new Button(grpTerrain, SWT.RADIO);
 		btnNoTerrain.setSelection(true);
@@ -735,7 +737,7 @@ public class MainGUI {
 		
 		Group grpWeather = new Group(cmpField, SWT.NONE);
 		grpWeather.setText("Weather");
-		grpWeather.setBounds(10, 52, 385, 64);
+		grpWeather.setBounds(10, 52, 415, 64);
 		
 		Button btnNoWeather = new Button(grpWeather, SWT.RADIO);
 		btnNoWeather.setSelection(true);
@@ -772,21 +774,21 @@ public class MainGUI {
 		
 		Combo cmbPok1Spikes = new Combo(cmpField, SWT.READ_ONLY);
 		cmbPok1Spikes.setItems(new String[] {"0", "1", "2", "3"});
-		cmbPok1Spikes.setBounds(10, 175, 46, 22);
+		cmbPok1Spikes.setBounds(10, 178, 46, 22);
 		cmbPok1Spikes.setText("0");
 		
 		Label lblPok1Spikes = new Label(cmpField, SWT.NONE);
-		lblPok1Spikes.setBounds(62, 178, 46, 19);
+		lblPok1Spikes.setBounds(62, 181, 46, 19);
 		lblPok1Spikes.setText("Spikes");
 		
 		Combo cmbPok2Spikes = new Combo(cmpField, SWT.READ_ONLY);
 		cmbPok2Spikes.setItems(new String[] {"0", "1", "2", "3"});
-		cmbPok2Spikes.setBounds(300, 175, 43, 22);
+		cmbPok2Spikes.setBounds(315, 178, 43, 22);
 		cmbPok2Spikes.setText("0");
 		
 		Label lblPok2Spikes = new Label(cmpField, SWT.NONE);
 		lblPok2Spikes.setText("Spikes");
-		lblPok2Spikes.setBounds(349, 179, 46, 18);
+		lblPok2Spikes.setBounds(364, 181, 46, 18);
 		
 		Button btnPok1StealthRock = new Button(cmpField, SWT.CHECK);
 		btnPok1StealthRock.setBounds(10, 155, 110, 18);
@@ -794,49 +796,49 @@ public class MainGUI {
 		
 		Button btnPok2StealthRock = new Button(cmpField, SWT.CHECK);
 		btnPok2StealthRock.setText("Stealth Rock");
-		btnPok2StealthRock.setBounds(300, 155, 110, 18);
+		btnPok2StealthRock.setBounds(315, 155, 110, 18);
 		
 		Button btnPok1Reflect = new Button(cmpField, SWT.CHECK);
-		btnPok1Reflect.setBounds(10, 199, 67, 18);
+		btnPok1Reflect.setBounds(10, 206, 67, 18);
 		btnPok1Reflect.setText("Reflect");
 		
 		Button btnPok1LightScreen = new Button(cmpField, SWT.CHECK);
-		btnPok1LightScreen.setBounds(83, 198, 110, 18);
+		btnPok1LightScreen.setBounds(10, 254, 110, 18);
 		btnPok1LightScreen.setText("Light Screen");
 		
 		Button btnPok1Forsight = new Button(cmpField, SWT.CHECK);
-		btnPok1Forsight.setBounds(10, 215, 71, 18);
+		btnPok1Forsight.setBounds(10, 230, 89, 18);
 		btnPok1Forsight.setText("Forsight");
 		
 		Button btnPok1HelpingHand = new Button(cmpField, SWT.CHECK);
-		btnPok1HelpingHand.setBounds(83, 215, 110, 18);
+		btnPok1HelpingHand.setBounds(10, 278, 121, 18);
 		btnPok1HelpingHand.setText("Helping Hand");
 		
 		Button btnPok2Reflect = new Button(cmpField, SWT.CHECK);
 		btnPok2Reflect.setText("Reflect");
-		btnPok2Reflect.setBounds(223, 199, 71, 18);
+		btnPok2Reflect.setBounds(315, 206, 71, 18);
 		
 		Button btnPok2LightScreen = new Button(cmpField, SWT.CHECK);
 		btnPok2LightScreen.setText("Light Screen");
-		btnPok2LightScreen.setBounds(300, 199, 105, 18);
+		btnPok2LightScreen.setBounds(315, 254, 105, 18);
 		
 		Button btnPok2Forsight = new Button(cmpField, SWT.CHECK);
 		btnPok2Forsight.setText("Forsight");
-		btnPok2Forsight.setBounds(223, 215, 71, 18);
+		btnPok2Forsight.setBounds(315, 230, 86, 18);
 		
 		Button btnPok2HelpingHand = new Button(cmpField, SWT.CHECK);
 		btnPok2HelpingHand.setText("Helping Hand");
-		btnPok2HelpingHand.setBounds(300, 215, 105, 18);
+		btnPok2HelpingHand.setBounds(315, 278, 110, 18);
 		
 		Button btnGravity = new Button(cmpField, SWT.CHECK);
 		btnGravity.setBounds(168, 114, 66, 18);
 		btnGravity.setText("Gravity");
 		
 		Label label_35 = new Label(cmpField, SWT.SEPARATOR | SWT.VERTICAL);
-		label_35.setBounds(199, 155, 2, 78);
+		label_35.setBounds(215, 155, 2, 141);
 		
 		Label label_40 = new Label(cmpField, SWT.SEPARATOR | SWT.HORIZONTAL);
-		label_40.setBounds(10, 138, 385, 2);
+		label_40.setBounds(10, 138, 415, 2);
 	}
 	
 	public void createDamageGroup() {
@@ -847,36 +849,36 @@ public class MainGUI {
 		tabBattle.setControl(cmpDamage);
 		
 		Label lblPok1Move1 = new Label(cmpDamage, SWT.NONE);
-		lblPok1Move1.setBounds(243, 10, 109, 14);
+		lblPok1Move1.setBounds(233, 70, 109, 14);
 		lblPok1Move1.setText("Pokemon1 Move 1");
 		
 		Label lblPok1Move2 = new Label(cmpDamage, SWT.NONE);
-		lblPok1Move2.setBounds(243, 30, 109, 14);
+		lblPok1Move2.setBounds(233, 90, 109, 14);
 		lblPok1Move2.setText("Pokemon1 Move 2");
 		
 		Label lblPok1Move3 = new Label(cmpDamage, SWT.NONE);
-		lblPok1Move3.setBounds(243, 50, 109, 14);
+		lblPok1Move3.setBounds(233, 110, 109, 14);
 		lblPok1Move3.setText("Pokemon1 Move 3");
 		
 		Label lblPok1Move4 = new Label(cmpDamage, SWT.NONE);
-		lblPok1Move4.setBounds(243, 70, 109, 14);
+		lblPok1Move4.setBounds(233, 130, 109, 14);
 		lblPok1Move4.setText("Pokemon1 Move 4");
 		
 		Label lblPok1MinMax1 = new Label(cmpDamage, SWT.NONE);
-		lblPok1MinMax1.setBounds(358, 10, 77, 14);
+		lblPok1MinMax1.setBounds(348, 70, 77, 14);
 		lblPok1MinMax1.setText("Min%-Max%");
 		
 		Label lblPok1MinMax2 = new Label(cmpDamage, SWT.NONE);
 		lblPok1MinMax2.setText("Min%-Max%");
-		lblPok1MinMax2.setBounds(358, 30, 77, 14);
+		lblPok1MinMax2.setBounds(348, 90, 77, 14);
 		
 		Label lblPok1MinMax3 = new Label(cmpDamage, SWT.NONE);
 		lblPok1MinMax3.setText("Min%-Max%");
-		lblPok1MinMax3.setBounds(358, 50, 77, 14);
+		lblPok1MinMax3.setBounds(348, 110, 77, 14);
 		
 		Label lblPok1MinMax4 = new Label(cmpDamage, SWT.NONE);
 		lblPok1MinMax4.setText("Min%-Max%");
-		lblPok1MinMax4.setBounds(358, 70, 77, 14);
+		lblPok1MinMax4.setBounds(348, 130, 77, 14);
 		
 		Label lblPok2Move1 = new Label(cmpDamage, SWT.NONE);
 		lblPok2Move1.setText("Pokemon2 Move 1");
@@ -909,6 +911,133 @@ public class MainGUI {
 		Label lblPok2MinMax4 = new Label(cmpDamage, SWT.NONE);
 		lblPok2MinMax4.setText("Min%-Max%");
 		lblPok2MinMax4.setBounds(125, 329, 77, 14);
+		
+		Label lblPokemon1 = new Label(cmpDamage, SWT.NONE);
+		lblPokemon1.setBounds(10, 10, 77, 14);
+		lblPokemon1.setText("Pokemon 1");
+		
+		Button btnEditPok1 = new Button(cmpDamage, SWT.NONE);
+		btnEditPok1.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				pokCalcFolder.setSelection(1);
+			}
+		});
+		btnEditPok1.setBounds(79, 3, 53, 28);
+		btnEditPok1.setText("Edit");
+		
+		Label lblPok1Hptxt = new Label(cmpDamage, SWT.NONE);
+		lblPok1Hptxt.setBounds(10, 30, 59, 14);
+		lblPok1Hptxt.setText("HP:");
+		
+		Label lblPok1Atktxt = new Label(cmpDamage, SWT.NONE);
+		lblPok1Atktxt.setBounds(10, 50, 59, 14);
+		lblPok1Atktxt.setText("ATK:");
+		
+		Label lblPok1Deftxt = new Label(cmpDamage, SWT.NONE);
+		lblPok1Deftxt.setBounds(10, 70, 59, 14);
+		lblPok1Deftxt.setText("DEF:");
+		
+		Label lblPok1SpAtktxt = new Label(cmpDamage, SWT.NONE);
+		lblPok1SpAtktxt.setBounds(10, 90, 53, 14);
+		lblPok1SpAtktxt.setText("SpATK:");
+		
+		Label lblPk1SpDeftxt = new Label(cmpDamage, SWT.NONE);
+		lblPk1SpDeftxt.setBounds(10, 110, 59, 14);
+		lblPk1SpDeftxt.setText("SpDef:");
+		
+		Label lblPok1Speedtxt = new Label(cmpDamage, SWT.NONE);
+		lblPok1Speedtxt.setBounds(10, 130, 59, 14);
+		lblPok1Speedtxt.setText("Speed:");
+		
+		Label lblPok1HpSum = new Label(cmpDamage, SWT.NONE);
+		lblPok1HpSum.setBounds(60, 30, 59, 14);
+		lblPok1HpSum.setText("XXX");
+		
+		Label lblPok1AtkSum = new Label(cmpDamage, SWT.NONE);
+		lblPok1AtkSum.setText("XXX");
+		lblPok1AtkSum.setBounds(60, 50, 59, 14);
+		
+		Label lblPok1DefSum = new Label(cmpDamage, SWT.NONE);
+		lblPok1DefSum.setText("XXX");
+		lblPok1DefSum.setBounds(60, 70, 59, 14);
+		
+		Label lblPok1SpAtkSum = new Label(cmpDamage, SWT.NONE);
+		lblPok1SpAtkSum.setText("XXX");
+		lblPok1SpAtkSum.setBounds(60, 90, 59, 14);
+		
+		Label lblPok1SpDefSum = new Label(cmpDamage, SWT.NONE);
+		lblPok1SpDefSum.setText("XXX");
+		lblPok1SpDefSum.setBounds(60, 110, 59, 14);
+		
+		Label lblPok1SpeedSum = new Label(cmpDamage, SWT.NONE);
+		lblPok1SpeedSum.setText("XXX");
+		lblPok1SpeedSum.setBounds(60, 130, 59, 14);
+		
+		Label lblPokemon2 = new Label(cmpDamage, SWT.NONE);
+		lblPokemon2.setText("Pokemon 2");
+		lblPokemon2.setBounds(303, 209, 77, 14);
+		
+		Button btnEditPok2 = new Button(cmpDamage, SWT.NONE);
+		btnEditPok2.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				pokCalcFolder.setSelection(2);
+			}
+		});
+		btnEditPok2.setText("Edit");
+		btnEditPok2.setBounds(372, 202, 53, 28);
+		
+		Label lblPok2Hptxt = new Label(cmpDamage, SWT.NONE);
+		lblPok2Hptxt.setText("HP:");
+		lblPok2Hptxt.setBounds(303, 229, 59, 14);
+		
+		Label lblPok2Atktxt = new Label(cmpDamage, SWT.NONE);
+		lblPok2Atktxt.setText("ATK:");
+		lblPok2Atktxt.setBounds(303, 249, 59, 14);
+		
+		Label lblPok2Deftxt = new Label(cmpDamage, SWT.NONE);
+		lblPok2Deftxt.setText("DEF:");
+		lblPok2Deftxt.setBounds(303, 269, 59, 14);
+		
+		Label lblPok2SpAtktxt = new Label(cmpDamage, SWT.NONE);
+		lblPok2SpAtktxt.setText("SpATK:");
+		lblPok2SpAtktxt.setBounds(303, 289, 53, 14);
+		
+		Label lblPok2SpDeftxt = new Label(cmpDamage, SWT.NONE);
+		lblPok2SpDeftxt.setText("SpDef:");
+		lblPok2SpDeftxt.setBounds(303, 309, 59, 14);
+		
+		Label lblPok2Speedtxt = new Label(cmpDamage, SWT.NONE);
+		lblPok2Speedtxt.setText("Speed:");
+		lblPok2Speedtxt.setBounds(303, 329, 59, 14);
+		
+		Label lblPok2HPSum = new Label(cmpDamage, SWT.NONE);
+		lblPok2HPSum.setText("XXX");
+		lblPok2HPSum.setBounds(353, 229, 59, 14);
+		
+		Label lblPok2AtkSum = new Label(cmpDamage, SWT.NONE);
+		lblPok2AtkSum.setText("XXX");
+		lblPok2AtkSum.setBounds(353, 249, 59, 14);
+		
+		Label lblPok2DefSum = new Label(cmpDamage, SWT.NONE);
+		lblPok2DefSum.setText("XXX");
+		lblPok2DefSum.setBounds(353, 269, 59, 14);
+		
+		Label lblPok2SpAtkSum = new Label(cmpDamage, SWT.NONE);
+		lblPok2SpAtkSum.setText("XXX");
+		lblPok2SpAtkSum.setBounds(353, 289, 59, 14);
+		
+		Label lblPok2SpDefSum = new Label(cmpDamage, SWT.NONE);
+		lblPok2SpDefSum.setText("XXX");
+		lblPok2SpDefSum.setBounds(353, 309, 59, 14);
+		
+		Label lblPok2SpeedSum = new Label(cmpDamage, SWT.NONE);
+		lblPok2SpeedSum.setText("XXX");
+		lblPok2SpeedSum.setBounds(353, 329, 59, 14);
+		
+		Label label_5 = new Label(cmpDamage, SWT.SEPARATOR | SWT.HORIZONTAL);
+		label_5.setBounds(10, 176, 415, 2);
 	}
 	
 	public void enterMods(Combo fillCombo) {
